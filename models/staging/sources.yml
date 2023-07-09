@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: fivetran_discorama
+    schema: google_drive_discorama
+    tables:
+      - name: actor
