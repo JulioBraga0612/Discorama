@@ -5,4 +5,4 @@ sources:
     schema: google_drive_discorama
     tables:
       - name: actor
-      - name: address
+      - name: {{ ref('address.csv')}}
