@@ -9,4 +9,3 @@ with
     )
 select *
 from fonte_categoria
-,"name","last_update"
