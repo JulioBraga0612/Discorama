@@ -10,3 +10,4 @@ sources:
       - name: address
       - name: country
       - name: customer
+      - name: film
