@@ -5,5 +5,7 @@ sources:
     schema: google_drive_discorama
     tables:
       - name: actor
-      - name: address
+
       - name: category
+      - name: city
+      - name: address
