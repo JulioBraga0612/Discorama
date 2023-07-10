@@ -8,7 +8,7 @@ with
             , cast (phone as int) as telefone
             , cast (postal_code as int) as codigo_postal
             , cast (left(cast(last_update as string), 10) as date) as ultima_atualizacao 
-            , cast (left(cast(_fivetran_synced as string), 10) as date) as el_fivetran
+            --, cast (left(cast(_fivetran_synced as string), 10) as date) as el_fivetran--
         from {{ref('address')}} 
     )
 select *
