@@ -10,7 +10,7 @@ with
             , cast (rental_rate as int) as avaliacao_do_aluguel
             , cast (length as int) as tamanho_do_aluguel
             , cast (replacement_cost as int) as preco_substituicao
-            , cast (rating as int) as avaliacao
+            , cast (rating as string) as avaliacao
             , cast (left(cast(last_update as string), 10) as date) as ultima_atualizacao 
             , cast (left(cast(_fivetran_synced as string), 10) as date) as el_fivetran
         from {{ source('fivetran_discorama', 'film') }} 
