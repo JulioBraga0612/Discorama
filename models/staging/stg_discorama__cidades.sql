@@ -1,5 +1,5 @@
 with
-    fonte_cidade as (
+    fonte_cidades as (
        select
             cast (city_id as int) as id_cidade
             , cast (city1 as string) as cidade
@@ -8,4 +8,4 @@ with
         from {{ref('city')}} 
     )
 select *
-from fonte_cidade
+from fonte_cidades

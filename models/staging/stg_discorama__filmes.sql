@@ -1,5 +1,5 @@
 with
-    fonte_filme as (
+    fonte_filmes as (
        select
             cast (film_id as int) as id_filme
             , cast (title as string) as titulo_do_filme
@@ -16,4 +16,4 @@ with
         from {{ source('fivetran_discorama', 'film') }} 
     )
 select *
-from fonte_filme
+from fonte_filmes
