@@ -2,7 +2,7 @@ with
     fonte_endereco as (
        select
             cast (address_id as int) as id_endereco
-            , cast(address1 as string) as endereco
+            , cast (address1 as string) as endereco
             , cast (city_id as int) as id_cidade
             , cast (district as string) as bairro
             , cast (phone as int) as telefone
