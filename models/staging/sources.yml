@@ -9,3 +9,4 @@ sources:
       - name: city
       - name: address
       - name: country
+      - name: customer
