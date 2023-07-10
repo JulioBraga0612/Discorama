@@ -11,3 +11,4 @@ sources:
       - name: country
       - name: customer
       - name: film
+      - name: film_actor
