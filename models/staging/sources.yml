@@ -6,3 +6,4 @@ sources:
     tables:
       - name: actor
       - name: address
+      - name: category
