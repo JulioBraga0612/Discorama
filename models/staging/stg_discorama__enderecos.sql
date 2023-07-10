@@ -1,5 +1,5 @@
 with
-    fonte_endereco as (
+    fonte_enderecos as (
        select
             cast (address_id as int) as id_endereco
             , cast (address1 as string) as endereco
@@ -11,4 +11,4 @@ with
         from {{ref('address')}} 
     )
 select *
-from fonte_endereco
+from fonte_enderecos
