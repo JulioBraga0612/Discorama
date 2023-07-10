@@ -10,7 +10,6 @@ with
             , cast (active as string) as funcionario_ativo
             , cast (username as string) as funcionario_username
             , cast (left(cast(last_update as string), 10) as date) as ultima_atualizacao
-            , cast (left(cast(_fivetran_synced as string), 10) as date) as el_fivetran
         from {{ref('staff')}} 
     )
 select *
