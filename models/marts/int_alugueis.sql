@@ -22,7 +22,6 @@ with
             , data_pagamento
             , el_fivetran
         from {{ref('stg_discorama__pagamentos')}}
-        where id_pagamento is not null
     )
 
     , joined as (
@@ -62,3 +61,4 @@ with
 
     select *
     from transformed
+    where id_pagamento is not null

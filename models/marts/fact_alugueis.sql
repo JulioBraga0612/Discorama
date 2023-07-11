@@ -55,13 +55,15 @@ with
             , int_alugueis.data_pagamento
             , int_alugueis.data_aluguel
             , int_alugueis.data_devolucao
-
         from int_alugueis
-        left join dim_funcionarios on dim_funcionarios.id_funcionario = dim_funcionarios.id_funcionario
-        left join dim_clientes on dim_clientes.id_cliente = dim_clientes.id_cliente
-        left join dim_inventario on dim_inventario.id_inventario = dim_filmes.id_inventario
-        left join dim_filmes on dim_filmes.id_filme = dim_inventario.id_filme
+        left join dim_funcionarios 
+            on int_alugueis.id_funcionario = dim_funcionarios.id_funcionario
+        left join dim_clientes
+            on int_alugueis.id_cliente = dim_clientes.id_cliente
+        left join dim_inventario
+            on int_alugueis.id_inventario = dim_inventario.id_inventario
+        left join dim_filmes
+            on dim_inventario.id_filme = dim_filmes.id_filme
     )
-
 select *
 from joined
