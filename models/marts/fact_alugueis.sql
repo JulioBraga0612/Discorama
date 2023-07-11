@@ -39,7 +39,7 @@ with
             , dim_clientes.codigo_postal
             , dim_clientes.criado_atualizacao
             , dim_inventario.id_inventario
-            , dim_filmes.stg_filmes.id_filme
+            , dim_filmes.id_filme
             , dim_filmes.id_categoria
             , dim_filmes.titulo_do_filme
             , dim_filmes.descricao_do_filme
