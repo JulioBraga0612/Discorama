@@ -11,7 +11,7 @@ with
             , el_fivetran
         from {{ref('stg_discorama__alugueis')}}
     )
-    
+
     , stg_pagametos as (
         select
             id_pagamento
@@ -21,7 +21,8 @@ with
             , valor_aluguel
             , data_pagamento
             , el_fivetran
-        from {{ref('stg_discorama__pagamentos')}}
+        from {{ref('stg_discorama__pagamentos')}} 
+        where (id_aluguel != 4591) or (id_aluguel = 4591 and id_cliente = 182) -- ex
     )
 
     , joined as (
@@ -36,7 +37,7 @@ with
             , stg_alugueis.data_aluguel
             , stg_alugueis.data_devolucao
         from stg_alugueis
-        left join stg_pagametos on stg_alugueis.id_aluguel = stg_pagametos.id_aluguel
+        inner join stg_pagametos on stg_alugueis.id_aluguel = stg_pagametos.id_aluguel
     )
 
     , transformed as (
@@ -61,4 +62,6 @@ with
 
     select *
     from transformed
-    where id_pagamento is not null
+
+
+ 

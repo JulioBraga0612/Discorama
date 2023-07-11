@@ -1,9 +1,9 @@
 version: 2
 
 models:
-  - name: dim_filmes
+  - name: fact_alugueis
     columns:
-      - name: id_filme
+      - name: id_aluguel
         tests:
           - not_null
           - unique
