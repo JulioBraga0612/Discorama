@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_funcionarios
+    columns:
+      - name: id_funcionario
+        tests:
+          - unique
+          - not_null

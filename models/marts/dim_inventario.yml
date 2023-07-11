@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_inventario
+    columns:
+      - name: id_inventario
+        tests:
+          - unique
+          - not_null
