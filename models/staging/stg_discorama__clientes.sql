@@ -8,7 +8,7 @@ with
             , first_name || ' ' || last_name as cliente_nome_completo
             , cast (address_id as int) as id_endereco
             , cast (activebool as string) as ativo_bool
-            , cast (left(cast(create_date as string), 10) as date) as ultima_atualizacao 
+            , cast (left(cast(create_date as string), 10) as date) as criado_atualizacao 
             , cast (left(cast(last_update as string), 10) as date) as ultima_atualizacao 
             , cast (left(cast(_fivetran_synced as string), 10) as date) as el_fivetran
             , cast (active as int) as ativo
