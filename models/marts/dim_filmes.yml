@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_filmes
+    columns:
+      - name: id_filme
+        tests:
+          - unique
+          - not_null
