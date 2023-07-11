@@ -7,9 +7,8 @@ with
             , cliente_ultimo_nome
             , cliente_nome_completo
             , id_endereco
-            , ativo_bool
+            , cliente_ativo
             , criado_atualizacao
-            , ativo
         from {{ref('stg_discorama__clientes')}}
     )
     
@@ -37,7 +36,7 @@ with
         select 
            id_pais
            , pais
-        from {{ref('stg_discorama__pais')}}
+        from {{ref('stg_discorama__paises')}}
     )
     
     , joined as (
@@ -45,18 +44,13 @@ with
             stg_clientes.id_cliente
             , stg_clientes.id_loja
             , stg_clientes.cliente_nome_completo
-            , stg_clientes.ativo_bool
-            , stg_clientes.criado_atualizacao
-            , stg_clientes.ativo
-            , stg_enderecos.id_endereco
+            , stg_clientes.cliente_ativo
             , stg_enderecos.endereco
             , stg_enderecos.bairro
-            , stg_enderecos.telefone
-            , stg_enderecos.codigo_postal
-            , stg_cidades.id_cidade
             , stg_cidades.cidade
-            , stg_pais.id_pais
             , stg_pais.pais
+            , stg_enderecos.codigo_postal
+            , stg_clientes.criado_atualizacao
         from stg_clientes
         left join stg_enderecos on stg_clientes.id_endereco = stg_enderecos.id_endereco
         left join stg_cidades on stg_enderecos.id_cidade = stg_cidades.id_cidade
