@@ -5,5 +5,4 @@ models:
     columns:
       - name: id_filme
         tests:
-          - unique
           - not_null

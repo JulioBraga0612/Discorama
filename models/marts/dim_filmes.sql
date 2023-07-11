@@ -32,10 +32,7 @@ with
             , stg_filmes.tamanho_do_aluguel
             , stg_filmes.preco_substituicao
             , stg_filmes.avaliacao
-            , stg_categoria_filme.id_categoria
             , stg_categorias.categoria_nome
-
-
         from  stg_filmes
         left join stg_categoria_filme on stg_categoria_filme.id_filme = stg_filmes.id_filme
         left join stg_inventario on stg_inventario.id_filme = stg_filmes.id_filme
